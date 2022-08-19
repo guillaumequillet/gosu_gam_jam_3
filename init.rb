@@ -48,6 +48,9 @@ class Window < Gosu::Window
     super(@game_variables['window']['width'], @game_variables['window']['height'], @game_variables['window']['fullscreen'])
     self.caption = @game_variables['window']['caption']
     @state = :title
+
+    @sounds[:music].volume = 0.3
+    @sounds[:music].play
   end
 
   def load_game_variables
@@ -83,7 +86,9 @@ class Window < Gosu::Window
 
     # sound loading
     @sounds = {
-      phase_end: Gosu::Sample.new('./sfx/446111__justinvoke__success-jingle.wav')
+      phase_end: Gosu::Sample.new('./sfx/446111__justinvoke__success-jingle.wav'),
+      validate: Gosu::Sample.new('./sfx/50565__broumbroum__sf3-sfx-menu-validate.wav'),
+      music: Gosu::Song.new('./sfx/retro-action-arcade-music-for-games-free-download.mp3')
     }
   end
 
@@ -116,6 +121,7 @@ class Window < Gosu::Window
     when :game
       @task_list.button_down(id)
     when :title, :win
+      @sounds[:validate].play(0.3)
       start_new_game
     end
   end

@@ -19,6 +19,9 @@ Sounds from freesound.org :
 - TiesWijnen 413310__tieswijnen__select.mp3
 - JustInvoke 446111__justinvoke__success-jingle
 
+Music : 
+Retro Action Arcade Music for Games by SPANAC from freesoundslibrary.com 
+
 Pictures from Pixabay.com
 
 THANK YOU for playing !
