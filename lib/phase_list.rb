@@ -36,10 +36,6 @@ class PhaseList
     @current_phase
   end
 
-  def update
-
-  end
-
   def draw
     offset_x, offset_y, offset_z = 160, 0, 0
     gfx = @window.phase_thumbnail_gfx
@@ -49,6 +45,10 @@ class PhaseList
       gfx.draw(offset_x + i * gfx.width, offset_y, offset_z)
       @font.draw_text(@phases[phase]['name'], offset_x + i * gfx.width + 10, offset_y + 5, offset_z, 1, 1, color)
       
+      if phase == @current_phase
+        @font.draw_text("(Score : #{@score}/#{@phases[@current_phase]['score_to_complete']})", offset_x + i * gfx.width, offset_y + 30, offset_z, 1, 1, color)
+      end
+
       # if this phase was previous to current one, we can check it
       if i < @phases_names.index(@current_phase)
         @font.draw_text("X", offset_x + i * gfx.width + 106, offset_y + 6, offset_z, 1, 1, Gosu::Color::GREEN)
