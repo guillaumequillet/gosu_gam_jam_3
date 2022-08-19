@@ -5,16 +5,16 @@ class PhaseList
     @phases = JSON.parse(File.read('./phases.json'))
     @phases_names = @phases.keys
     @font = Gosu::Font.new(20)
-    @success = 0
+    @score = 0
     @current_phase = @phases_names.first
   end
 
-  def add_success
-    @success += 1
+  def add_score(score)
+    @score += score
 
     # if enough tasks were done to complete the phase
-    if @success >= @phases[@current_phase]['tasks_to_complete']
-      @success = 0
+    if @score >= @phases[@current_phase]['score_to_complete']
+      @score = 0
       next_phase_id = @phases_names.index(@current_phase) + 1 
       @window.close_phase
       

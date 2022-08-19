@@ -8,8 +8,8 @@
             },
             "sequence": ["W", "E", "S"],
             "duration": 4000,
-            "reward": 1000,
-            "penalty": 500            
+            "reward": 2000,
+            "penalty": 1000            
         },
         "Garden": {
             "keys": {
@@ -19,7 +19,7 @@
             },
             "sequence": ["M", "M", "C", "T", "T", "C", "M", "C"],
             "duration": 30000,
-            "reward": 20000,
+            "reward": 10000,
             "penalty": 5000
         },
         "Excavator": {
@@ -31,7 +31,7 @@
             },
             "sequence": ["U", "R", "L", "E", "U", "R", "L", "E"],
             "duration": 40000,
-            "reward": 30000,
+            "reward": 15000,
             "penalty": 10000
         }
     },
@@ -44,8 +44,8 @@
             },
             "sequence": ["W", "E", "S"],
             "duration": 4000,
-            "reward": 1000,
-            "penalty": 500            
+            "reward": 2000,
+            "penalty": 1000            
         },
         "CimentMixer": {
             "keys": {
@@ -56,7 +56,7 @@
             "sequence": ["G", "P", "G", "P", "C"],
             "duration": 30000,
             "reward": 10000,
-            "penalty": 1000
+            "penalty": 5000
         },
         "Wall": {
             "keys": {
@@ -65,8 +65,8 @@
             },
             "sequence": ["B", "C", "B", "C", "B", "C"],
             "duration": 6000,
-            "reward": 2000,
-            "penalty": 100            
+            "reward": 5000,
+            "penalty": 2500            
         }
     }
 }

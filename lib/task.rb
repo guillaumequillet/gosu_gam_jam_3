@@ -54,7 +54,7 @@ class Task
         # we set to complete if that was the last key to press
         if @current_in_sequence == @sequence.size
           # we add to the score
-          @task_list.window.close_task(true, @reward)
+          @task_list.window.close_task(@reward)
           
           # we complete the task
           @complete = true
@@ -93,7 +93,7 @@ class Task
     # task missed
     if elapsed_time >= @duration
       # we remove from the score
-      @task_list.window.close_task(false, -@penalty)
+      @task_list.window.close_task(-@penalty)
       @complete = true
       @@sounds[:loose].play(0.2)
     # task is not missed, we update the thumbnail display

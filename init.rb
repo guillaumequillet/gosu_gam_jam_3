@@ -87,9 +87,9 @@ class Window < Gosu::Window
     }
   end
 
-  def close_task(succeed, score)
+  def close_task(score)
     @global_score += score
-    @phase_list.add_success if succeed
+    @phase_list.add_score(score)
   end
 
   def close_phase
