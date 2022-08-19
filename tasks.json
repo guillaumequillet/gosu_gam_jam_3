@@ -113,6 +113,30 @@
             "duration": 4000,
             "reward": 2000,
             "penalty": 1000            
+        },
+        "Roof": {
+            "keys": {
+                "L": "Lathing",
+                "S": "Screw",
+                "T": "Tile",
+                "G": "Gutter"
+            },
+            "sequence": ["L", "S", "S", "L", "S", "S", "T", "T", "T", "T", "G", "G"],
+            "duration": 20000,
+            "reward": 10000,
+            "penalty": 4000    
+        },
+        "Garbage": {
+            "keys": {
+                "C": "Collect",
+                "E": "Excavator",
+                "L": "Load",
+                "D": "Disposal"
+            },
+            "sequence": ["C", "C", "D", "E", "L", "E", "L", "D"],
+            "duration": 15000,
+            "reward": 7000,
+            "penalty": 3000    
         }
     }
 }

@@ -29,8 +29,6 @@
 
   que reste t-il ?
     créer du contenu (phases, actions à faire) : privilégier du place holder !!!
-    faire un écran titre / écran victoire
-    trouver une musique, ajouter des bruitages adaptés aux actions ?
 =end
 
 require 'json'
