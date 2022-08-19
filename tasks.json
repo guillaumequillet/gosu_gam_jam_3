@@ -11,6 +11,17 @@
             "reward": 2000,
             "penalty": 1000            
         },
+        "Administrative2": {
+            "keys": {
+                "W": "Write",
+                "E": "Enveloppe",
+                "S": "Ship"
+            },
+            "sequence": ["W", "E", "S"],
+            "duration": 4000,
+            "reward": 2000,
+            "penalty": 1000            
+        },
         "Garden": {
             "keys": {
                 "M": "Mower",
@@ -36,7 +47,18 @@
         }
     },
     "phase_1": {
-        "Administrative": {
+        "Administrative3": {
+            "keys": {
+                "W": "Write",
+                "E": "Enveloppe",
+                "S": "Ship"
+            },
+            "sequence": ["W", "E", "S"],
+            "duration": 4000,
+            "reward": 2000,
+            "penalty": 1000            
+        },
+        "Administrative4": {
             "keys": {
                 "W": "Write",
                 "E": "Enveloppe",
@@ -67,6 +89,30 @@
             "duration": 6000,
             "reward": 5000,
             "penalty": 2500            
+        }
+    },
+    "phase_2": {
+        "Administrative5": {
+            "keys": {
+                "W": "Write",
+                "E": "Enveloppe",
+                "S": "Ship"
+            },
+            "sequence": ["W", "E", "S"],
+            "duration": 4000,
+            "reward": 2000,
+            "penalty": 1000            
+        },
+        "Administrative6": {
+            "keys": {
+                "W": "Write",
+                "E": "Enveloppe",
+                "S": "Ship"
+            },
+            "sequence": ["W", "E", "S"],
+            "duration": 4000,
+            "reward": 2000,
+            "penalty": 1000            
         }
     }
 }

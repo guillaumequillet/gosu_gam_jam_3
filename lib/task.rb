@@ -155,7 +155,7 @@ class Task
   end
 
   def draw_actions
-    y = 200
+    y = 150
     x = 500
     z = 0
 

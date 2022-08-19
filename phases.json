@@ -6,5 +6,9 @@
     "phase_1": {
         "name": "Structure",
         "score_to_complete": 50000
+    },
+    "phase_2": {
+        "name": "Roof",
+        "score_to_complete": 50000
     }
 }
