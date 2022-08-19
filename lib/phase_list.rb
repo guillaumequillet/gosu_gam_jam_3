@@ -45,9 +45,14 @@ class PhaseList
     gfx = @window.phase_thumbnail_gfx
 
     @phases.keys.each_with_index do |phase, i|
-      color = phase == @current_phase ? Gosu::Color::GREEN : Gosu::Color::WHITE
-      gfx[phase].draw(offset_x + i * gfx[phase].width, offset_y, offset_z)
-      @font.draw_text(@phases[phase]['name'], offset_x + i * gfx[phase].width, offset_y + gfx[phase].height, offset_z, 1, 1, color)
+      color = Gosu::Color::WHITE
+      gfx.draw(offset_x + i * gfx.width, offset_y, offset_z)
+      @font.draw_text(@phases[phase]['name'], offset_x + i * gfx.width + 10, offset_y + 5, offset_z, 1, 1, color)
+      
+      # if this phase was previous to current one, we can check it
+      if i < @phases_names.index(@current_phase)
+        @font.draw_text("X", offset_x + i * gfx.width + 106, offset_y + 6, offset_z, 1, 1, Gosu::Color::GREEN)
+      end
     end
   end
 end

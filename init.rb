@@ -64,10 +64,7 @@ class Window < Gosu::Window
 
   def load_resources
     # phase thumbnails loading
-    @phase_thumbnail_gfx = {}
-    Dir.entries('./gfx/phases').select {|fn| fn.include?('.png')}.each do |filename|
-      @phase_thumbnail_gfx[filename.slice(0, filename.size - 4)] = Gosu::Image.new("./gfx/phases/#{filename}")
-    end
+    @phase_thumbnail_gfx = Gosu::Image.new('./gfx/phases/template.png')
 
     # tasks loading
     @task_thumbnail_gfx = {}

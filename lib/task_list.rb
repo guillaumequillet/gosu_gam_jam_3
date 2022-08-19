@@ -67,7 +67,7 @@ class TaskList
   def draw
     @tasks.select {|task| !task.nil?}.each {|task| task.draw(0, 64, 0)}
 
-    @font ||= Gosu::Font.new(20)
+    # @font ||= Gosu::Font.new(20)
     # @font.draw_text(@tasks[0].inspect, 10, 400, 0) # for DEBUG Purpose
   end
 end
