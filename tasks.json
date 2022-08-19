@@ -10,6 +10,18 @@
             "duration": 30000,
             "reward": 20000,
             "penalty": 5000
+        },
+        "Excavator": {
+            "keys": {
+                "U": "Up",
+                "R": "Right",
+                "L": "Left",
+                "E": "Empty"
+            },
+            "sequence": ["U", "R", "L", "E", "U", "R", "L", "E", "U", "R", "L", "E"],
+            "duration": 40000,
+            "reward": 30000,
+            "penalty": 10000
         }
     },
     "phase_1": {
