@@ -1,3 +1,9 @@
 {
+    "window": {
+        "width": 640,
+        "height": 480,
+        "caption": "Gosu Game Jam 3 - Construction Tasks !",
+        "fullscreen": false
+    },
     "time_before_task": 3000
 }

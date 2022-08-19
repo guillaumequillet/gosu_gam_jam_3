@@ -31,7 +31,6 @@
     créer du contenu (phases, actions à faire) : privilégier du place holder !!!
     faire un écran titre / écran victoire
     trouver une musique, ajouter des bruitages adaptés aux actions ?
-    corriger le bug du clignotement sur l'écran titre !!!
 =end
 
 require 'json'
@@ -44,12 +43,11 @@ require_relative './lib/phase_list.rb'
 class Window < Gosu::Window
   attr_reader :phase_thumbnail_gfx, :task_thumbnail_gfx, :task_images_gfx
   def initialize
-    super(640, 480, false)
-    self.caption = 'Gosu Game Jam 3 - Construction Tasks !'
-    @state = :win
-
     load_game_variables
     load_resources
+    super(@game_variables['window']['width'], @game_variables['window']['height'], @game_variables['window']['fullscreen'])
+    self.caption = @game_variables['window']['caption']
+    @state = :title
   end
 
   def load_game_variables
@@ -128,13 +126,9 @@ class Window < Gosu::Window
   def update
     case @state
     when :title
-      @title_tick ||= Gosu::milliseconds
-      @title_blink ||= true
-
-      if Gosu::milliseconds - @title_tick >= 1000
-        @title_blink = !@title_blink
-        @title_tick = Gosu::milliseconds
-      end
+      @title_tick ||= 0
+      @title_tick += 1
+      @title_tick = 0 if @title_tick >= 60
     when :game
       add_new_task
       @task_list.update
@@ -163,11 +157,14 @@ class Window < Gosu::Window
       # blinking text
       title_scale = 1.25
 
-      if @title_blink
-        @font.draw_text("Press any key to start", 190, 319, 0, title_scale, title_scale)
-        @font.draw_text("Press any key to start", 190, 321, 0, title_scale, title_scale)
-        @font.draw_text("Press any key to start", 189, 320, 0, title_scale, title_scale)
-        @font.draw_text("Press any key to start", 191, 320, 0, title_scale, title_scale)
+      @font.draw_text(@title_blink, 0, 0, 0)
+
+      if @title_tick < 30
+        @font.draw_text("Press any key to start", 190, 318, 0, title_scale, title_scale)
+        @font.draw_text("Press any key to start", 190, 322, 0, title_scale, title_scale)
+        @font.draw_text("Press any key to start", 188, 320, 0, title_scale, title_scale)
+        @font.draw_text("Press any key to start", 192, 320, 0, title_scale, title_scale)
+
         @font.draw_text("Press any key to start", 190, 320, 0, title_scale, title_scale, Gosu::Color::BLACK)
       end
     when :game
@@ -177,8 +174,8 @@ class Window < Gosu::Window
       draw_score
     when :win
       @images[:win].draw(0, 0, 0)
-      @font.draw("You WON ! Score : #{@global_score}", 10, 10, 0)
-      @font.draw('Press any key to restart', 10, 40, 0)
+      @font.draw("You WON ! Score : #{@global_score}", 10, 10, 0, 1, 1, Gosu::Color::BLACK)
+      @font.draw('Press any key to restart', 270, 460, 0, 0.8, 0.8, Gosu::Color::BLACK)
     end
   end
 end
