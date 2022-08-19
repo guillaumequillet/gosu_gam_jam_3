@@ -1,5 +1,16 @@
 {
     "phase_0": {
+        "Administrative": {
+            "keys": {
+                "W": "Write",
+                "E": "Enveloppe",
+                "S": "Ship"
+            },
+            "sequence": ["W", "E", "S"],
+            "duration": 4000,
+            "reward": 1000,
+            "penalty": 500            
+        },
         "Garden": {
             "keys": {
                 "M": "Mower",
@@ -18,13 +29,24 @@
                 "L": "Left",
                 "E": "Empty"
             },
-            "sequence": ["U", "R", "L", "E", "U", "R", "L", "E", "U", "R", "L", "E"],
+            "sequence": ["U", "R", "L", "E", "U", "R", "L", "E"],
             "duration": 40000,
             "reward": 30000,
             "penalty": 10000
         }
     },
     "phase_1": {
+        "Administrative": {
+            "keys": {
+                "W": "Write",
+                "E": "Enveloppe",
+                "S": "Ship"
+            },
+            "sequence": ["W", "E", "S"],
+            "duration": 4000,
+            "reward": 1000,
+            "penalty": 500            
+        },
         "CimentMixer": {
             "keys": {
                 "G": "Get",
@@ -35,6 +57,16 @@
             "duration": 30000,
             "reward": 10000,
             "penalty": 1000
+        },
+        "Wall": {
+            "keys": {
+                "B": "Brick",
+                "C:": "Ciment"
+            },
+            "sequence": ["B", "C", "B", "C", "B", "C"],
+            "duration": 6000,
+            "reward": 2000,
+            "penalty": 100            
         }
     }
 }

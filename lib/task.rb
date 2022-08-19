@@ -95,7 +95,7 @@ class Task
       # we remove from the score
       @task_list.window.close_task(false, -@penalty)
       @complete = true
-      @@sounds[:wrong].play(0.2)
+      @@sounds[:loose].play(0.2)
     # task is not missed, we update the thumbnail display
     else
       ratio = elapsed_time / @duration.to_f
@@ -147,7 +147,7 @@ class Task
 
   def draw_sequence
     @image.draw_rot(320, 200, 1, 0, 0.5, 0.5, @sequence_scale, @sequence_scale)
-    # @@font.draw_text(@sequence.join('-'), 320, 250, 0) # For DEBUG purpose
+    @@font.draw_text(@sequence.join('-'), 255, 370, 0)
   end
 
   def draw_sequence_image

@@ -175,7 +175,7 @@ class Window < Gosu::Window
     when :win
       @images[:win].draw(0, 0, 0)
       @font.draw("You WON ! Score : #{@global_score}", 10, 10, 0, 1, 1, Gosu::Color::BLACK)
-      @font.draw('Press any key to restart', 270, 460, 0, 0.8, 0.8, Gosu::Color::BLACK)
+      @font.draw('Press any key to restart', 270, 463, 0, 0.7, 0.7, Gosu::Color::BLACK)
     end
   end
 end
