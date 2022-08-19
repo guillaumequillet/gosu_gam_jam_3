@@ -1,0 +1,28 @@
+{
+    "phase_0": {
+        "Garden": {
+            "keys": {
+                "M": "Mower",
+                "T": "Tree",
+                "C": "Chipper"
+            },
+            "sequence": ["M", "M", "C", "T", "T", "C", "M", "C"],
+            "duration": 30000,
+            "reward": 20000,
+            "penalty": 5000
+        }
+    },
+    "phase_1": {
+        "CimentMixer": {
+            "keys": {
+                "G": "Get",
+                "P": "Put",
+                "C": "Ciment"
+            },
+            "sequence": ["G", "P", "G", "P", "C"],
+            "duration": 30000,
+            "reward": 10000,
+            "penalty": 1000
+        }
+    }
+}

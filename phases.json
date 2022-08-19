@@ -1,0 +1,10 @@
+{
+    "phase_0": {
+        "name": "Field",
+        "tasks_to_complete": 4
+    },
+    "phase_1": {
+        "name": "Structure",
+        "tasks_to_complete": 4
+    }
+}
