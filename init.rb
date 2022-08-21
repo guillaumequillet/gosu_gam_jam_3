@@ -1,36 +1,3 @@
-=begin
-  TODO
-
-  tâches :
-
-  - déserbage / arbres => tronconnage + decoupe + broyeur vegetaux
-  - fondations à creuser
-  - feraillage
-  - beton à créer (betonniere)
-  - deposer beton dans fondations
-  - murs à monter
-
-  crédits :
-  son : 
-  broumbroum freesound.org 50565__broumbroum__sf3-sfx-menu-validate.wav
-  GameAudio freesound.org 220174__gameaudio__spacey-loose.wav
-  TiesWijnen freesound.org 413310__tieswijnen__select.mp3
-  JustInvoke freesound.org 
-
-  images
-  Amigos3D Pixabay.com base title screen
-  IlyaYurukin Pixabay.com background image (sera virée avant la fin...)
-
-  Mode d'emploi : 
-
-  il faut dans le dossier gfx / tasks
-    pour chaque sous dossier correspondant à une tache
-    mettre une image pour chaque "KEY", comme "A.png"
-
-  que reste t-il ?
-    créer du contenu (phases, actions à faire) : privilégier du place holder !!!
-=end
-
 require 'json'
 require 'gosu'
 
